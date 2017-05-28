@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+MAINTAINER venantvr
+
 RUN apt-get update
 
 # Install Atom

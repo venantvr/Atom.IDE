@@ -13,7 +13,7 @@ sudo docker-compose up &
 
 sudo docker run -v /var/www/sql:/sql --link dockertests_database_1:mysql -it arey/mysql-client -h mysql -ppassword -D mysite -e "source /sql/export.sql" &
 
-cd atom
+cd atom1.17.1
 
 sudo docker build -t test/rvv .
 sudo xhost +
