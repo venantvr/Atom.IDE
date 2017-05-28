@@ -30,10 +30,6 @@ RUN apt-get install -y --no-install-recommends \
 RUN wget https://github.com/atom/atom/releases/download/v1.17.1/atom-amd64.deb
 RUN dpkg -i atom-amd64.deb
 
-# Todo...
-#RUN apt-get -y install php-xml php-pear 
-#RUN pecl install xdebug
-
 RUN apm install monokai-seti \
     hyperclick \
     intentions \
@@ -60,6 +56,15 @@ RUN apt-get install -y --no-install-recommends chromium-browser
 RUN apt-get install -y --no-install-recommends libglu1-mesa
 RUN apt-get install -y --no-install-recommends php
 RUN apt-get install -y --no-install-recommends git-core
+RUN apt-get install -y --no-install-recommends php7.0-sqlite
+RUN apt-get install -y --no-install-recommends sqlite3
+
+# Todo...
+RUN apt-get -y install \
+    php-xml \
+    php-pear \
+    php-mbstring \
+    openssl
 
 RUN usermod -u 1000 www-data
 RUN chown -R www-data:www-data /var/www
